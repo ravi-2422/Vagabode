@@ -61,6 +61,10 @@ const {
     
   }
 
+  const onToggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal])
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
@@ -113,15 +117,15 @@ const {
           font-light
         "
       >
-        <p>Already have an account?
+        <p>First time using Vagabode ?
           <span 
-           // onClick={onToggle} 
+            onClick={onToggle} 
             className="
               text-neutral-800
               cursor-pointer 
               hover:underline
             "
-            > Sign in</span>
+            > Creat an account</span>
         </p>
       </div>
     </div>
