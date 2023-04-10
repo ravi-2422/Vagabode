@@ -1,5 +1,4 @@
 'use client'
-
 import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
 import { signIn } from "next-auth/react";
@@ -22,8 +21,8 @@ import { useRouter } from "next/navigation";
 
 const LoginModal = ()=>{
 const router = useRouter();
- const registerModal = useRegisterModal();
- const loginModal = useLoginModal();
+const registerModal = useRegisterModal();
+const loginModal = useLoginModal();
 const [isLoading, setIsLoading] = useState(false);
 const { 
     register, 
