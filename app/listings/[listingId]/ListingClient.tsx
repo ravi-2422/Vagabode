@@ -9,7 +9,7 @@ import { differenceInDays, eachDayOfInterval } from 'date-fns';
 
 import useLoginModal from "@/app/hooks/useLoginModal";
 import { SafeListing,
-    // SafeReservation,
+     SafeReservation,
       SafeUser } from "@/app/types";
 import { Reservation } from "@prisma/client";
 import Container from "@/app/components/Container";
@@ -25,8 +25,7 @@ const initialDateRange = {
 };
 
 interface ListingClientProps {
- // reservations?: SafeReservation[];
-  reservations?: Reservation[];
+  reservations?: SafeReservation[];
   listing: SafeListing & {
     user: SafeUser;
   };
